@@ -1,7 +1,0 @@
-django
-pip
-psycopg2
-psycopg2-binary
-pytz
-setuptools
-sqlparse
