@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sith</title>
+</head>
+<body>
+<h1> Выберите себя из списка</h1>
+<table>
+    <h2> Все ситхи</h2>
+    {% for sith in siths %}
+    <a href="/sith/{{sith.id}}">{{sith.name}}</a>
+    <p>{{sith.planet.name}}</p>
+    <p>{{sith.hands_count}}</p>
+    {% endfor %}
+</table>
+
+<table>
+    <h2> Ситхи с более , чем 1 Рукой Тени</h2>
+    {% for sith in siths_with_2_or_more_hands %}
+    <a href="/sith/{{sith.id}}">{{sith.name}}</a>
+    <p>{{sith.planet}}</p>
+    <p>{{sith.hands_count}}</p>
+    {% endfor %}
+</table>
+<a href="/">На главную</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All recruits</title>
+</head>
+<body>
+<table>
+    {% for recruit in recruits %}
+    <a href="{{request.path}}{{recruit.id}}/"> {{recruit.name}}</a>
+    <p>{{recruit.planet}}</p>
+    <p>{{recruit.age}}</p>
+    {% endfor %}
+</table>
+<a href="/">На главную</a>
+</body>
+</html>

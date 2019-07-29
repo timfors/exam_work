@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    {% for answer in answers %}
+    <p>{{answer.text}}</p>
+    {% endfor %}
+</table>
+<form method="post">
+    {% csrf_token %}
+    <input type="submit" value="Взять в ученики">
+</form>
+{% if error %}
+<p> {{error}} </p>
+{% endif%}
+<a href="/">На главную</a>
+</body>
+</html>

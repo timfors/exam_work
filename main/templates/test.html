@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+
+    <table>
+        {% for question in questions %}
+        <p> {{question.text}} </p>
+        <input name="{{question.id}}" type="text">
+        {% endfor %}
+        <input name="submit" type="submit" value="Отправить">
+    </table>
+</form>
+{% if errors %}
+{% for error in errors %}
+<p> {{error}} </p>
+{% endfor %}
+{% endif %}
+</body>
+</html>
